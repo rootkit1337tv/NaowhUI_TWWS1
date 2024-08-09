@@ -334,7 +334,7 @@ NUI.Options = {
 					name = "Load Profiles",
 					desc = "Load your selected NaowhUI profiles onto this character",
 					hidden = function()
-						if NUI:IsAddOnEnabled("ElvUI") or AreAddOnsDisabled() then
+						if NUI:IsAddOnEnabled("ElvUI") or AreAddOnsDisabled() or not NUI.db.global.profiles then
 							return true
 						end
 					end,
